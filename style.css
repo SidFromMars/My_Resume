@@ -1,0 +1,237 @@
+/* ================================
+   GOOGLE FONT
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================================
+   BASE
+================================ */
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #ffffff;
+}
+
+/* ================================
+   MAIN LAYOUT
+================================ */
+
+/* Контейнер резюме */
+.resume {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    background: #fff;
+}
+
+/* ================================
+   LEFT COLUMN (sidebar)
+================================ */
+
+.sidebar {
+    width: 300px;
+    background: #2d3542;
+    color: #fff;
+    padding: 50px 25px 40px;
+}
+
+/* ================================
+   PROFILE
+================================ */
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Фото профілю */
+.profile__image img {
+    width: 169px;
+    height: 169px;
+    border-radius: 200px;
+    border: 5px solid #e98914;
+    object-fit: cover;
+}
+
+/* Ім'я */
+.profile__name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #bd9047;
+    text-align: center;
+}
+
+/* Статус */
+.profile__position {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.56px;
+    color: #fff;
+    text-align: center;
+}
+
+/* ================================
+   DIVIDER
+================================ */
+
+.sidebar hr {
+    border: none;
+    height: 1px;
+    background: rgba(0,0,0,0.4);
+    margin: 10px 0 10px;
+}
+
+/* ================================
+   SECTION TITLES
+================================ */
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #bd9047;
+}
+
+/* ================================
+   TEXT STYLES LEFT COLUMN
+================================ */
+
+.sidebar p,
+.sidebar li {
+    font-size: 12px;
+    line-height: normal;
+}
+
+.sidebar ul {
+    list-style: disc;
+    padding-left: 16.5px;
+}
+
+.sidebar section {
+    margin-bottom: 20px;
+}
+
+/* ================================
+   RIGHT COLUMN
+================================ */
+
+.content {
+    flex: 1;
+    padding: 50px 40px 25px;
+}
+
+/* ================================
+   SUMMARY TEXT
+================================ */
+
+.summary p {
+    font-size: 12px;
+    color: #444;
+    padding-bottom: 20px;
+}
+
+/* Divider right column */
+.content hr {
+    border: none;
+    height: 1px;
+    background: rgba(153,153,153,0.5);
+    margin-bottom: 30px;
+}
+
+/* ================================
+   EXPERIENCE
+================================ */
+
+.job {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/* Ліва частина job */
+.job__meta {
+    width: 150px;
+    font-size: 11px;
+    color: #444;
+}
+
+/* Компанія */
+.job__meta .company {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+/* Дати */
+.job__meta p:last-child {
+    font-style: italic;
+}
+
+/* Права частина job */
+.job__description {
+    flex: 1;
+}
+
+/* Назва посади */
+.job__description h3 {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+/* Список */
+.job__description ul {
+    list-style: disc;
+    padding-left: 16.5px;
+    font-size: 12px;
+    color: #444;
+}
+
+/* ================================
+   ACCESSIBILITY
+================================ */
+
+.visually-hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+    .resume {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .content {
+        padding: 40px 25px;
+    }
+
+    .job {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .profile__image img {
+        width: 130px;
+        height: 130px;
+    }
+}
